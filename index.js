@@ -34,11 +34,11 @@ console.log(decrypted.toString()); // in HEX for some reason
 // 4d657373616765
 
 
-let globalKey = '14c79f4e31d03b4c';
-let globalVector = '';//'bda20c45101a615f';
+let globalKey = '133457799bbcdff1'; // HEX
+let globalVector = '';//'bda20c45101a615f'; // HEX
 
-let encryptString = "Message";
-let decryptString = "b7f1117111ebf530";
+let encryptString = "123456789abcdef1"; // TEXT
+let decryptString = "82ab1c0cb7524170ab2e055d716bc227"; // TEXT
 let result = '';
 
 //encrypt_string();

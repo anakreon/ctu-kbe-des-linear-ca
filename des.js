@@ -38,7 +38,7 @@ export function des (key, message, encrypt, mode, iv, padding) {
   var chunk = 0;
   //set up the loops for single and triple des
   var iterations = keys.length == 32 ? 3 : 9; //single or triple des
-  if (iterations == 3) {looping = encrypt ? new Array (0, 32, 2) : new Array (30, -2, -2);}
+  if (iterations == 3) {looping = encrypt ? new Array (0, 16, 2) : new Array (14, -2, -2);}
   else {looping = encrypt ? new Array (0, 32, 2, 62, 30, -2, 64, 96, 2) : new Array (94, 62, -2, 32, 64, 2, 30, -2, -2);}
 
   //pad the message depending on the padding parameter
@@ -143,7 +143,7 @@ function des_createKeys (key) {
   //how many iterations (1 for des, 3 for triple des)
   var iterations = key.length > 8 ? 3 : 1; //changed by Paul 16/6/2007 to use Triple DES for 9+ byte keys
   //stores the return keys
-  var keys = new Array (32 * iterations);
+  var keys = new Array (16 * iterations);
   //now define the left shifts which need to be done
   var shifts = new Array (0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0);
   //other variables
