@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha *.test.js --reporter spec"
+    "test": "mocha *.js --reporter spec"
   },
   "author": "Martin Hula <npm@anaworld.cz>",
   "license": "ISC",
@@ -15,6 +15,7 @@
   },
   "type": "module",
   "dependencies": {
-    "crypto-js": "github:anakreon/crypto-js#DESrounds"
+    "crypto-js": "github:anakreon/crypto-js#DESrounds",
+    "crypto-random-string": "^3.3.0"
   }
 }
